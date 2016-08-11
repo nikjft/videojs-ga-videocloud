@@ -82,8 +82,9 @@
           a.src = g;
           return m.parentNode.insertBefore(a, m);
         })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
-        ga('create', tracker, 'auto');
+        ga('create', tracker, 'auto', {allowLinker: true});
         ga('require', 'displayfeatures');
+        ga('require', 'linker');
       }
     }
     adStateRegex = /(\s|^)vjs-ad-(playing|loading)(\s|$)/;
