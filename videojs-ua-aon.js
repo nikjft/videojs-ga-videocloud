@@ -83,12 +83,15 @@
           a.src = g;
           return m.parentNode.insertBefore(a, m);
         })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
-        ga('create', tracker, 'auto', {allowLinker: true});
+        ga('create', tracker, 'auto', {'allowLinker': true});
         ga('require', 'displayfeatures');
         ga('require', 'linker');
-          ga('create', clientTracker, 'auto', ct, {allowLinker: true});
+        ga('linker:autoLink', ['makeityoursource.com','bluemod.us'] );
+        
+        ga('create', clientTracker, 'auto', {'name':'ct', 'allowLinker': true});
         ga('ct.require', 'displayfeatures');
         ga('ct.require', 'linker');
+        ga('ct.linker:autoLink', ['makeityoursource.com','bluemod.us'] );
       }
     }
     adStateRegex = /(\s|^)vjs-ad-(playing|loading)(\s|$)/;
