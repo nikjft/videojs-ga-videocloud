@@ -87,11 +87,13 @@
         ga('require', 'displayfeatures');
         ga('require', 'linker');
         ga('linker:autoLink', ['makeityoursource.com','bluemod.us'] );
+        ga('send', 'pageview');
         
         ga('create', clientTracker, 'auto', {'name':'ct', 'allowLinker': true});
         ga('ct.require', 'displayfeatures');
         ga('ct.require', 'linker');
         ga('ct.linker:autoLink', ['makeityoursource.com','bluemod.us'] );
+        ga('ct.send', 'pageview');
       }
     }
     adStateRegex = /(\s|^)vjs-ad-(playing|loading)(\s|$)/;
